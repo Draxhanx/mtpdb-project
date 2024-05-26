@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Dropdown = ({ title, option, func }) => {
   return (
-    <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto p-2">
+    <div className="w-[20%]  p-2">
       <select
         onChange={func}
         defaultValue='0'
