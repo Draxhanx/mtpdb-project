@@ -6,7 +6,7 @@ function HorizontalCards({ data, title }) {
   // console.log(title);
 
   return data ? (
-    <div className="w-full  flex gap-5 overflow-x-scroll flex-shrink-0 px-5  ">
+    <div className="lg:w-full  lg:flex gap-5 overflow-x-scroll flex-shrink-0 px-5  ">
       {data.length > 0 ? (
         data.map((items , index) => (
           <Link 
@@ -27,7 +27,7 @@ function HorizontalCards({ data, title }) {
                 items.original_title ||
                 items.title}
             </h1>
-            <p className="text-sm font-light text-white tracking-thighter leading-none">
+            <p className="text-sm  mb-5 font-light text-white tracking-thighter leading-none">
               {items.overview.slice(0, 100)}
               <Link className="ml-2 text-zinc-300 font-bold">more</Link>
             </p>

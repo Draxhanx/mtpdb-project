@@ -7,12 +7,11 @@ import HorizontalCards from "./Partials/HorizontalCards";
 import { Dropdown } from "./Partials/Dropdown";
 import Lodar from "../utils/Lodar";
 
-
 function Home() {
   document.title = "SCSDB | Homepage";
   const [wallpaper, setwallpaper] = useState(null);
   const [trending, settrending] = useState([]);
-  const [category, setcategory] = useState("movie")
+  const [category, setcategory] = useState("movie");
 
   const wallpaperData = async () => {
     try {
@@ -27,7 +26,7 @@ function Home() {
 
   const getTrending = async () => {
     try {
-      const {data} = await axios.get(`/trending/${category}/day`);
+      const { data } = await axios.get(`/trending/${category}/day`);
       settrending(data.results);
     } catch (error) {
       console.log(error);
@@ -36,9 +35,8 @@ function Home() {
 
   useEffect(() => {
     !wallpaper && wallpaperData();
-     getTrending();
+    getTrending();
   }, [category]);
-
 
   return wallpaper ? (
     <>
@@ -48,13 +46,19 @@ function Home() {
         <Header wallpaper={wallpaper} />
 
         <div className="mb-3 flex justify-between mt-5 px-5 ">
-        <h1 className="text-2xl font-semibold text-white">Trending</h1>
-        <Dropdown title='Filter' option={["tv" , "movie" , "all"]} func={(e)=>setcategory(e.target.value)}  />
-      </div>
-        <HorizontalCards data={trending} title={category}  />
+          <h1 className="text-2xl font-semibold text-white">Trending</h1>
+          <Dropdown
+            title="Filter"
+            option={["tv", "movie", "all"]}
+            func={(e) => setcategory(e.target.value)}
+          />
+        </div>
+        <HorizontalCards data={trending} title={category} />
       </div>
     </>
-  ) : <Lodar/>
+  ) : (
+    <Lodar />
+  );
 }
 
 export default Home;

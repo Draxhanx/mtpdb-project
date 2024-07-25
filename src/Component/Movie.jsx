@@ -24,7 +24,7 @@ function Movie() {
           }
           
          
-          console.log(data.page[2]);
+          // console.log(data.page[2]);
         } catch (error) {
           console.log(error);
         }

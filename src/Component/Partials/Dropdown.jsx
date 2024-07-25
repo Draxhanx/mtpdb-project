@@ -2,13 +2,13 @@ import React from 'react';
 
 export const Dropdown = ({ title, option, func }) => {
   return (
-    <div className="w-[20%]  p-2">
+    <div className="lg:w-[20%]  p-2">
       <select
         onChange={func}
         defaultValue='0'
         name='format'
         id='format'
-        className="w-full p-2 border border-gray-300 rounded-md"
+        className=" lg:w-full p-2 border border-gray-300 rounded-md"
       >
         <option value='0' disabled>
           {title}

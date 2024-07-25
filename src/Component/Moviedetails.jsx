@@ -14,6 +14,8 @@ function Moviedetails() {
   const { info } = useSelector((state) => state.movie);
   const dispatch = useDispatch();
 
+  console.log(id);
+
   useEffect(() => {
     dispatch(asyncloadmovie(id));
     return () => {
@@ -31,10 +33,10 @@ function Moviedetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-full h-[150vh] px-32"
+      className="relative w-full lg:w-full h-[150vh] lg:px-32"
     >
       {/* items upper div  */}
-      <div className="icon w-[20%] flex items-cneter mt-10  justify-between ">
+      <div className="icon w-[80%] mx-8 lg:mx-0 lg:w-[20%] flex items-cneter mt-10  justify-between ">
         <i
           onClick={() => navigate(-1)}
           className=" trendingIcon text-white text-xl ri-arrow-left-line"
@@ -59,9 +61,9 @@ function Moviedetails() {
 
       {/* moviecard and details div */}
 
-      <div className="w-full flex mt-10 ">
+      <div className="lg:w-full flex mt-10 ">
         <img
-          className="w-[18%] rounded-xl h-[45vh] object-cover"
+          className="w-[40%] lg:w-[18%] rounded-xl h-[30vh] lg:h-[45vh] object-cover"
           src={`https://image.tmdb.org/t/p/original${info.detail.backdrop_path}`}
           alt=""
         />

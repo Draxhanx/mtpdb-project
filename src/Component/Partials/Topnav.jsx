@@ -24,7 +24,7 @@ function Topnav() {
   }, [query]);
 
   return (
-    <div className="w-screen  lg:w-[90%] h-[10vh] flex items-center justify-start relative  lg:ml-[10%] ">
+    <div className="w-[80%]  lg:w-[80%] h-[10vh] flex items-center justify-start relative ml-10   lg:ml-[10%] ">
       <i className=" text-zinc-400 text-3xl ri-search-2-line"></i>
       <input
         onChange={(e) => setquery(e.target.value)}
@@ -40,14 +40,14 @@ function Topnav() {
         ></i>
       )}
 
-      <div className="w-[60%] max-h-[50vh] bg-zinc-100 absolute top-[90%] overflow-auto">
+      <div className="w-full lg:w-[60%] max-h-[50vh] bg-zinc-100 absolute top-[90%] overflow-auto">
         {searches.map((items, index) => (
           <Link to={`/${items.media_type}/details/${items.id}`}
             key={index}
             className="w-full p-10  border-b-2 border-zinc-200 flex items-center justify-start hover:font-semibold  "
           >
             <img
-              className="w-[25vh] h-[25vh] object-cover mr-5 "
+              className="w-28 lg:w-[25vh] lg:h-[25vh] object-cover mr-5 "
               src={ items.backdrop_path || items.profile_path ? `https://image.tmdb.org/t/p/original${
                 items.backdrop_path ||  items.profile_path} ` : noimg}
               alt=""

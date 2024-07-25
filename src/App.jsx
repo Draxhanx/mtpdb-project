@@ -15,7 +15,7 @@ import Notfound from '../src/utils/Notfound'
 function App() {
   return (
     <>
-      <div className="lg:w-screen h-screen flex bg-[#1F1E24]">
+      <div className="lg:w-screen w-[100%]  lg:mb-0 mb-[60%] lg:h-screen flex bg-[#1F1E24]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />
