@@ -47,7 +47,7 @@ function Trending() {
 
   return  (
     <div className="w-full h-screen bg-[#1F1E24]  ">
-      <div className="w-full h-[10vh] p-10 flex items-center justify-between ">
+      <div className="lg:w-full h-[10vh] lg:p-10 flex items-center justify-between ">
         <div className="flex items-center gap-5 w-[20%] ">
           <i
             onClick={() => navigate(-1)}
@@ -55,10 +55,15 @@ function Trending() {
           ></i>{" "}
           <h1 className="text-2xl text-white font-bold">Trending</h1>
         </div>
-        <div className="w-[100%] flex items-center justify-between">
-          <Topnav />
-
-          <Dropdown
+        <div className="w-[100%]  flex items-center justify-between">
+          <div className="hidden lg:block">
+           <Topnav /> 
+          </div>
+          
+<div className="lg:hidden">
+ 
+</div>
+           <Dropdown
             title="Category"
             option={["tv", "movie"]}
             func={(e) => setcategory(e.target.value)}

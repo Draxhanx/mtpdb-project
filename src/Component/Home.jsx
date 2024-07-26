@@ -41,12 +41,12 @@ function Home() {
   return wallpaper ? (
     <>
       <Sidenav />
-      <div className="w-[80%] h-full overflow-auto">
+      <div className="lg:w-[80%]   w-[100%] h-full overflow-auto">
         <Topnav />
         <Header wallpaper={wallpaper} />
 
-        <div className="mb-3 flex justify-between mt-5 px-5 ">
-          <h1 className="text-2xl font-semibold text-white">Trending</h1>
+        <div className="mb-3 flex mx-5 lg:mx-0 justify-between mt-5 lg:px-5 ">
+          <h1 className="text-2xl  font-semibold text-white">Trending</h1>
           <Dropdown
             title="Filter"
             option={["tv", "movie", "all"]}

@@ -5,7 +5,7 @@ function  Sidenav() {
     
   return (
     
-    <div className='nav relative left-[-100%] lg:left-0 w-0  lg:w-[20%] lg:h-full p-5 lg:p-8 border-r-2 border-zinc-500'>
+    <div className='nav relative hidden lg:block  lg:left-0 w-0  lg:w-[20%] lg:h-full p-5 lg:p-8 border-r-2 border-zinc-500'>
         <h1 className='text-2xl  text-white'>
         <i className="text-[#6556CD]  ri-tv-fill mr-2"></i>
         <span>MTPDB</span>

@@ -6,12 +6,12 @@ import Lodar from "../utils/Lodar";
 function Card({ trending, title }) {
   return trending ? (
     <div className="w-full  bg-[#1F1E24]">
-      <div className="flex flex-wrap gap-4 mx-6 px-10  ">
+      <div className="flex flex-wrap gap-4 lg:mx-6 mx-2 px-2 lg:px-10  ">
         {trending.map((items, index) => (
           <Link
             key={index}
             to={`/${trending.media_type || title}/details/${items.id}`}
-            className="w-[15%] h-[47vh] mb-[5%]  "
+            className="lg:w-[15%] w-[30%] h-[25vh] lg:h-[47vh] mb-[20%] lg:mb-[5%]  "
           >
             <img
               className="w-full h-full object-cover rounded-lg "

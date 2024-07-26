@@ -15,7 +15,7 @@ function HorizontalCards({ data, title }) {
             className="min-w-[15%] h-[40vh] mt-5  rounded-lg overflow-hidden "
           >
             <img 
-              className="w-full h-[20vh] object-cover"
+              className="w-full rounded-lg lg:rounded-none lg:h-[20vh] h-[25vh] object-cover"
               src={`https://image.tmdb.org/t/p/original${
                 items.backdrop_path || items.profile_path
               }`}

@@ -33,7 +33,7 @@ function Moviedetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-full lg:w-full h-[150vh] lg:px-32"
+      className="relative  lg:left-0 w-[100%] lg:w-full h-[100vh] lg:h-[150vh] lg:px-32"
     >
       {/* items upper div  */}
       <div className="icon w-[80%] mx-8 lg:mx-0 lg:w-[20%] flex items-cneter mt-10  justify-between ">
@@ -61,17 +61,17 @@ function Moviedetails() {
 
       {/* moviecard and details div */}
 
-      <div className="lg:w-full flex mt-10 ">
+      <div className="lg:w-full flex flex-col lg:flex-none mt-10 ">
         <img
-          className="w-[40%] lg:w-[18%] rounded-xl h-[30vh] lg:h-[45vh] object-cover"
+          className="lg:w-[18%] rounded-xl h-[30vh] lg:h-[45vh] object-cover"
           src={`https://image.tmdb.org/t/p/original${info.detail.backdrop_path}`}
           alt=""
         />
         {/* name and genre div */}
-        <div className="w-full mx-10">
-          <h1 className="text-4xl font-bold text-white">{info.detail.title}</h1>
-          <div className="flex gap-5">
-            <h1 className="text-2xl font-bold text-white">
+        <div className="w-full mx-5 lg:mx-10">
+          <h1 className="lg:text-4xl text-3xl font-bold text-white">{info.detail.title}</h1>
+          <div className="lg:flex lg:gap-5">
+            <h1 className="lg:text-2xl text-xl font-bold text-white">
               {info.detail.release_date}
             </h1>
             <h1 className="text-2xl font-bold text-white">
@@ -84,7 +84,7 @@ function Moviedetails() {
           </div>
           {/* details div */}
           <div>
-            <h1 className="text-xl text-white font-italic mt-5">
+            <h1 className="lg:text-xl text-white font-italic mt-5">
               {info.detail.tagline}
             </h1>
 
@@ -104,7 +104,7 @@ function Moviedetails() {
               <div className="mt-6">
                 <Link
                   to={`${pathname}/trailer`}
-                  className="px-5 py-4 bg-[#6556CD] text-white hover:bg-[#392e80]  rounded-lg   font-semibold"
+                  className="lg:px-5 px-2 py-4 bg-[#6556CD] text-white hover:bg-[#392e80]  rounded-lg   font-semibold"
                 >
                   <i className=" text-white ri-play-fill"></i> Watch Tariler
                 </Link>
@@ -116,7 +116,7 @@ function Moviedetails() {
         {/* watch provider or avialaible for watch */}
       </div>
      {info.watchproviders &&  <div className="mt-10 ">
-        <div className="flex items-center gap-5 ">
+        <div className="mx-2 lg:mx-0 flex items-center gap-5 ">
           <h1 className="text-xl font-bold  text-white mt-3">
             Avaliable Platfrom{" "}
           </h1>
@@ -129,7 +129,7 @@ function Moviedetails() {
             />
           ))}
         </div>
-        <div className="flex items-center gap-5 ">
+        <div className="mx-2 lg:mx-0 flex items-center gap-5 ">
           <h1 className="text-xl font-bold  text-white mt-3">
             Avaliable For Rent{" "}
           </h1>
@@ -144,7 +144,7 @@ function Moviedetails() {
               />
             ))}
         </div>
-        <div className="flex items-center gap-5 ">
+        <div className="mx-2 lg:mx-0 flex items-center gap-5 ">
           <h1 className="text-xl font-bold  text-white mt-3">
             Avaliable For Buy{" "}
           </h1>
@@ -161,7 +161,7 @@ function Moviedetails() {
         </div>
       </div>}
       {/* recomndation  */}
-      <div className="bg-[#1F1E24] mt-10">
+      <div className="bg-[#1F1E24] lg:mt-10  mt-[10vh]">
         <HorizonatalCards
           data={
             info.similar  || info.recommendations

@@ -13,7 +13,7 @@ function Header({ wallpaper }) {
         backgroundPosition: "top",
         backgroundSize: "cover",
       }}
-      className="w-full bg-blue-500  h-[30vh] lg:w-full lg:h-[55vh]  flex flex-col justify-end items-start p-[5%]"
+      className="w-[100%] rounded-lg lg:rounded-none bg-blue-500  h-[30vh] lg:w-full lg:h-[55vh]  flex flex-col justify-end items-start p-[5%]"
     >
       <h1 className="text-2xl font-black text-white">
         {wallpaper.name ||
